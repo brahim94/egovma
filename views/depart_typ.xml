@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+    <record id="hr.menu_hr_department_tree" model="ir.ui.menu">
+        <field name="name">Unité de fonctionnement</field>
+    </record>
+
+    <record id="hr.open_module_tree_department" model="ir.actions.act_window">
+        <field name="name">Unité de fonctionnement</field>
+    </record>
+
+    <record id="view_hr_department_inherit" model="ir.ui.view">
+                <field name="name">hr.department.form.inherit</field>
+                <field name="model">hr.department</field>
+                <field name="inherit_id" ref="hr.view_department_form"/>
+                <field name="arch" type="xml">
+                    <xpath expr="//form/sheet/group/field[@name='parent_id']" position="replace">
+                        <field name="type_un"/>
+                        <field name="parent_id" string="Unité fonctionnement Parent" attrs="{'invisible':[('type_un', '==', 'type1')]}"/>
+                    </xpath>
+                    <xpath expr="//form/sheet/group/field[@name='name']" position="replace">
+                        <field name="name" string="nom unité fonctionnement"/>
+                    </xpath>
+                     <xpath expr="//form/sheet/group/field[@name='parent_id']" position="after">
+                        <field name="nom_un"/>
+                    </xpath>
+
+                </field>
+    </record>
+
+
+
+ </data>
+</odoo>
+

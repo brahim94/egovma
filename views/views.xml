@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="egovma.list">
+      <field name="name">egovma list</field>
+      <field name="model">egovma.egovma</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="egovma.action_window">
+      <field name="name">egovma window</field>
+      <field name="res_model">egovma.egovma</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="egovma.action_server">
+      <field name="name">egovma server</field>
+      <field name="model_id" ref="model_egovma_egovma"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="egovma" id="egovma.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="egovma.menu_1" parent="egovma.menu_root"/>
+    <menuitem name="Menu 2" id="egovma.menu_2" parent="egovma.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="egovma.menu_1_list" parent="egovma.menu_1"
+              action="egovma.action_window"/>
+    <menuitem name="Server to list" id="egovma" parent="egovma.menu_2"
+              action="egovma.action_server"/>
+-->
+  </data>
+</odoo>
