@@ -27,6 +27,7 @@
         #'security/ir.model.access.csv',
         'views/views.xml',
         'views/depart_typ.xml',
+        'views/emp_corp_grad.xml',
         'views/templates.xml',
     ],
     # only loaded in demonstration mode

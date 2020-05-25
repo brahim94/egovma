@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+    <record id="view_hr_employee_inherit" model="ir.ui.view">
+                <field name="name">hr.employee.form.inherit</field>
+                <field name="model">hr.employee</field>
+                <field name="inherit_id" ref="hr.view_employee_form"/>
+                <field name="arch" type="xml">
+                    <xpath expr="/form/sheet/div[@class='oe_title']/h1/field[@name='name']" position="replace">
+                        <field name="name" invisible="1"/>
+                        <group>
+                            <group>
+                                <field name="preno_emp"/>
+                                <field name="nom_emp"/>
+                            </group>
+                            <group>
+                                <field name="preno_emp_ar"/>
+                                <field name="nom_emp_ar"/>
+                            </group>
+                        </group>
+                     </xpath>
+                     <xpath expr="/form/sheet/div[@class='oe_title']/h1/field[@name='name']" position="after">
+                        <field name="full_name_ar" invisible="1" />
+                     </xpath>
+                </field>
+    </record>
+
+     <record model='ir.ui.view' id='view_last_name_tree'>
+            <field name='name'>view.last.name.tree</field>
+            <field name='model'>hr.employee</field>
+            <field name='inherit_id' ref='hr.view_employee_tree'/>
+            <field name='arch' type='xml'>
+                <xpath expr="//field[@name='name']" position="after">
+                    <field name="full_name_ar"/>
+                    <!--field name="full_first_name" invisible="1"/>
+                    <field name="full_last_name" invisible="1"/-->
+                </xpath>
+            </field>
+    </record>
+
+    <record model='ir.ui.view' id='view_arabic_name_kanban'>
+            <field name='name'>view.last.name.tree</field>
+            <field name='model'>hr.employee</field>
+            <field name='inherit_id' ref='hr.hr_kanban_view_employees'/>
+            <field name='arch' type='xml'>
+                <xpath expr="//field[@name='name']" position="after">
+                    <field name="full_name_ar"/>
+                    <!--field name="full_first_name" invisible="1"/>
+                    <field name="full_last_name" invisible="1"/-->
+                </xpath>
+            </field>
+    </record>
+
+
+     </data>
+</odoo>
