@@ -23,6 +23,10 @@
                      <xpath expr="/form/sheet/div[@class='oe_title']/h1/field[@name='name']" position="after">
                         <field name="full_name_ar" invisible="1" />
                      </xpath>
+                     <xpath expr="/form/sheet/group[1]/group[2]/field[@name='parent_id']" position="after">
+                        <field name="corp"/>
+                        <field name="grad"/>
+                    </xpath>      
                 </field>
     </record>
 
@@ -33,8 +37,6 @@
             <field name='arch' type='xml'>
                 <xpath expr="//field[@name='name']" position="after">
                     <field name="full_name_ar"/>
-                    <!--field name="full_first_name" invisible="1"/>
-                    <field name="full_last_name" invisible="1"/-->
                 </xpath>
             </field>
     </record>
@@ -46,8 +48,6 @@
             <field name='arch' type='xml'>
                 <xpath expr="//field[@name='name']" position="after">
                     <field name="full_name_ar"/>
-                    <!--field name="full_first_name" invisible="1"/>
-                    <field name="full_last_name" invisible="1"/-->
                 </xpath>
             </field>
     </record>

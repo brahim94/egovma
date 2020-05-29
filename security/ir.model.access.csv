@@ -1,2 +1,9 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_profile_list,access_profile_list,model_profile_list,base.group_user,1,1,1,1
+access_department_type,access_department_type,model_department_type,base.group_user,1,1,1,1
+access_employee_corp,access_employee_corp,model_employee_corp,base.group_user,1,1,1,1
+access_employee_grad,access_employee_grad,model_employee_grad,base.group_user,1,1,1,1
+access_event_trajet,access_event_trajet,model_event_trajet,base.group_user,1,1,1,1
+access_event_emplacement,access_event_emplacement,model_event_emplacement,base.group_user,1,1,1,1
+access_event_emplacement_arrive,access_event_emplacement_arrive,model_event_emplacement_arrive,base.group_user,1,1,1,1
+
+

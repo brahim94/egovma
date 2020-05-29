@@ -20,13 +20,15 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base', 'hr'],
+    'depends': ['base', 'hr', 'event', 'fleet'],
 
     # always loaded
     'data': [
-        #'security/ir.model.access.csv',
+        'security/ir.model.access.csv',
         'views/views.xml',
+        'data/sequence.xml',
         'views/depart_typ.xml',
+        'views/mission_hid.xml',
         'views/emp_corp_grad.xml',
         'views/templates.xml',
     ],

@@ -15,12 +15,24 @@
                 <field name="model">hr.department</field>
                 <field name="inherit_id" ref="hr.view_department_form"/>
                 <field name="arch" type="xml">
-                    <xpath expr="//form/sheet/group/field[@name='parent_id']" position="replace">
-                        <field name="type_un"/>
-                        <field name="parent_id" string="Unité fonctionnement Parent" attrs="{'invisible':[('type_un', '==', 'type1')]}"/>
-                    </xpath>
+                    
                     <xpath expr="//form/sheet/group/field[@name='name']" position="replace">
                         <field name="name" string="nom unité fonctionnement"/>
+                    </xpath>
+                    <xpath expr="//form/sheet/group/field[@name='parent_id']" position="replace">
+                    <field name="depart_typ_fiel">
+                            <form>
+                                <group>
+                                    <field name="name"/>
+                                    <field name="niveau"/>                
+                                </group>
+                            </form>
+                        </field>
+                    <field name="type_test" invisible="1"/>
+                    <field name="parent_id" attrs="{'invisible':[('type_test', '==', 'type1')]}"/>
+                    <!--xpath expr="//form/sheet/group/field[@name='parent_id']" position="replace"-->
+                        
+                        
                     </xpath>
                      <xpath expr="//form/sheet/group/field[@name='parent_id']" position="after">
                         <field name="nom_un"/>
